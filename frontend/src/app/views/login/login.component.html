@@ -1,0 +1,48 @@
+  <div class="body">
+        <div class="container" id="container">
+            
+            <div class="form-container sign-in">
+                
+              <form #f="ngForm" (ngSubmit)="loginUser(f)">
+                <h1>Connexion !</h1>
+                <div class="social-icons">
+                    <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                    <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                    <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                    <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+                    <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                </div>
+                
+                <input type="text" class="form-control" placeholder="Email" name="usernameOrEmail" #usernameOrEmail="ngModel" ngModel />
+                <input type="password" class="form-control" placeholder="Password" name="password" #password="ngModel" ngModel />
+               
+               
+                <button type="submit" >Connexion</button>
+                <div class="alert alert-danger" *ngIf="messageErr">
+                    {{messageErr}}
+                </div>
+                <p> <a routerLink="/" >annuler?</a></p>
+              </form>
+            </div>
+            <div class="toggle-container">
+              <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                  <h1>Welcome Back!</h1>
+                  <p>Enter your personal details to use all of site features</p>
+                  <button class="hidden" id="login">Sign In</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                  <h1>Hello, Friend!</h1>
+                  <img src="assets/front/signin2.png" alt="" style="width: 80%;">
+                 
+                   
+                    <p>Vous n'avez pas de compte ? <a routerLink="/signup" >Inscrivez-vous ici</a>.</p>
+                
+                  <button class="hidden" id="register" routerLink="/signup">Sign Up</button>
+                </div>
+              </div>
+            </div>
+          </div>    
+
+
+        </div>  
